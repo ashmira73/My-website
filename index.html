@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHAHZU by COMFIEE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Main Styles */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header Section */
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #34495e;
+            color: white;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            animation: glow 1.5s ease-in-out infinite alternate, slideIn 1.5s ease-in-out;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 15px;
+        }
+
+        /* Keyframes for animation */
+        @keyframes glow {
+            0% { text-shadow: 0 0 10px rgba(46, 204, 113, 0.7); }
+            100% { text-shadow: 0 0 20px rgba(231, 76, 60, 1); }
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Product Section */
+        .product-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .product-images {
+            flex: 1;
+            text-align: center;
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .product-images img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-info {
+            flex: 1;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .product-info h2 {
+            font-size: 2rem;
+            color: #34495e;
+            margin-bottom: 20px;
+        }
+
+        .product-info p {
+            font-size: 1.1rem;
+            margin: 10px 0;
+        }
+
+        .product-info ul {
+            margin-top: 10px;
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .product-info ul li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .product-info ul li:before {
+            content: "✔";
+            color: #e74c3c;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        /* Buy Now Button */
+        .buy-now-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #e74c3c;
+            color: white;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            text-transform: uppercase;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .buy-now-btn:hover {
+            background-color: #c0392b;
+        }
+
+        /* Contact */
+        .contact {
+            font-size: 1.2rem;
+            margin-top: 30px;
+            color: #e74c3c;
+        }
+
+        /* Additional Information */
+        .additional-info {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .additional-info h2 {
+            font-size: 1.8rem;
+            color: #34495e;
+            margin-bottom: 15px;
+        }
+
+        .additional-info p {
+            font-size: 1.1rem;
+            margin: 10px 0;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #34495e;
+            color: white;
+        }
+
+        /* Media Query for Mobile */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            .product-section {
+                flex-direction: column;
+                padding: 15px;
+            }
+
+            .product-info {
+                text-align: center;
+            }
+
+            .product-info h2 {
+                font-size: 1.5rem;
+            }
+
+            .product-info p {
+                font-size: 1rem;
+            }
+
+            .buy-now-btn {
+                padding: 10px 20px;
+                font-size: 1rem;
+            }
+
+            .additional-info h2 {
+                font-size: 1.5rem;
+            }
+
+            .additional-info p {
+                font-size: 1rem;
+            }
+
+            .container {
+                padding: 10px;
+            }
+        }
+
+        /* Media Query for Extra Small Devices */
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            header p {
+                font-size: 0.9rem;
+            }
+
+            .product-info h2 {
+                font-size: 1.4rem;
+            }
+
+            .product-info p {
+                font-size: 0.9rem;
+            }
+
+            .buy-now-btn {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
+
+            .additional-info h2 {
+                font-size: 1.3rem;
+            }
+
+            .additional-info p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>SHAHZU by COMFIEE</h1>
+        <p>Medium Soft Single Bed Cotton Folding Mattress/Gadda for Students, PG, Hostel, Picnic (2.5 x 6 ft, Black Cotton)</p>
+    </header>
+
+    <!-- Main Product Section -->
+    <div class="container">
+        <div class="product-section">
+            <!-- Product Image -->
+            <div class="product-images">
+                <img src="c:\Users\CYBER\Downloads\shazu.jpg" alt="SHAHZU by COMFIEE Mattress">
+            </div>
+            
+            <!-- Product Information -->
+            <div class="product-info">
+                <h2>Product Highlights</h2>
+                <p>Size: 2.5 x 6 ft</p>
+                <p>Color: Black Cotton</p>
+                <p>Perfect for Students, PG, Hostels, and Picnics.</p>
+                <ul>
+                    <li>Portable and foldable for easy storage.</li>
+                    <li>Medium soft cotton filling for comfort.</li>
+                    <li>Lightweight and travel-friendly design.</li>
+                    <li>Durable and long-lasting quality.</li>
+                </ul>
+                <h3 class="contact">Contact: <a href="tel:+917350077737">7350077737</a></h3>
+                <a href="https://amzn.in/d/0u1Zmkr" class="buy-now-btn">Buy Now</a>
+            </div>
+        </div>
+
+        <!-- Additional Product Information Section -->
+        <div class="additional-info">
+            <h2>Why Choose SHAHZU by COMFIEE?</h2>
+            <p>SHAHZU by COMFIEE is designed for those looking for a blend of comfort, portability, and affordability. This mattress is ideal for students, people living in PGs, hostels, or for those who travel often and need a convenient bed solution. The compact design allows easy folding, making it perfect for storing in tight spaces or carrying it along for outdoor trips like picnics.</p>
+
+            <h2>Key Benefits:</h2>
+            <ul>
+                <li>Eco-Friendly Materials: Made from high-quality cotton, this mattress is both comfortable and eco-friendly.</li>
+                <li>Hypoallergenic: Safe for individuals with allergies or sensitive skin due to the natural cotton fabric.</li>
+                <li>Low Maintenance: Easy to clean and maintain, just fold it away when not in use.</li>
+                <li>Budget-Friendly: A cost-effective solution for students and frequent travelers.</li>
+            </ul>
+
+            <h2>Ideal for Various Settings:</h2>
+            <p>Whether you're a student or traveler, this mattress is the perfect addition to your living space. It's light, durable, and made with your comfort in mind. Take it with you to hostels, PG accommodations, or use it as a guest mattress at home.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 SHAHZU by COMFIEE</p>
+    </footer>
+
+</body>
+</html>
